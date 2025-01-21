@@ -1,0 +1,50 @@
+\ProvidesPackage{style}
+
+% Language setup
+\RequirePackage{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{csquotes}
+
+
+% Additional Packages
+\RequirePackage{tikz}
+\usetikzlibrary
+{circuits,circuits.ee.IEC,calc, shapes, backgrounds, angles, intersections, quotes, arrows, tikzmark}
+%\RequirePackage{circuitikz}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\RequirePackage{circuitikz}
+
+% Figures
+\RequirePackage{graphicx}
+\graphicspath{{./figures/}}
+
+
+\RequirePackage{enumitem}
+\newcommand*{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+% Load other style sheets
+\RequirePackage{../.style/format}
+\RequirePackage{../.style/math}
+
+
+%\addbibresource{../quellen.bib}
+
+% Setup Header
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{
+  \sheetauthor\\
+  spring term 2025
+}
+\fancyhead[c]{\modul}
+\fancyhead[R]{Tutor: \tutor \\ sheet \sheet}
+\fancyfoot[R]{page \thepage}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+% Setup Font
+\usepackage[scale=1]{tgheros} % or helvet
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\baselinestretch}{1.5} 
+

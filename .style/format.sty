@@ -1,0 +1,53 @@
+\ProvidesPackage{format}
+
+
+% Page Formatting
+\RequirePackage{geometry}
+\geometry{a4paper, margin=2cm}
+
+% Typesetting
+\RequirePackage{xcolor}
+\RequirePackage[most]{tcolorbox}
+
+
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkbordercolor = 0 0 0,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=blue,
+    pdftitle={DOTW},
+    pdfpagemode=FullScreen,
+}
+
+\RequirePackage{cleveref}
+\urlstyle{same}    
+
+\RequirePackage[all]{hypcap}
+% Bibliography
+\RequirePackage[backend=biber,
+                style=authoryear-icomp,
+                sortlocale=de_DE,
+                natbib=true,
+                url=false, 
+                doi=true,
+                eprint=false]{biblatex}
+
+
+% Collaboration
+\RequirePackage{comment}
+
+% Title Formatting
+\RequirePackage{titlesec}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\arabic{section}.}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\arabic{section}.\arabic{subsection}.}{0.6em}{}
+
+  \RequirePackage{subfigure}
+  \usepackage{float}
+
+\RequirePackage{booktabs}
