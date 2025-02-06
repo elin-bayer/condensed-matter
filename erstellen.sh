@@ -1,7 +1,7 @@
-anzahl_ordner=12
+anzahl_ordner=4
 
 for i in $(seq  1 $anzahl_ordner); do
-	ordnername="Blatt_$i"
+	ordnername="exercise_$i"
 	mkdir $ordnername
 
 	texdatei="${ordnername}/${ordnername}.tex"
@@ -12,7 +12,7 @@ for i in $(seq  1 $anzahl_ordner); do
 	echo "\WarningFilter{latex}{You have requested package}" >> $texdatei
 	echo "\WarningFilter{latex}{Empty bibliography}" >> $texdatei
 	echo "\WarningFilter{latex}{Interword spacing}" >> $texdatei
-	echo "\newcommand{\tutor}{}" >> $texdatei
+	echo "\newcommand{\tutor}{Andreas Rydh}" >> $texdatei
 	echo "\newcommand{\modul}{condensed matter}" >> $texdatei
 	echo "\newcommand{\sheet}{$i}" >> $texdatei
 	echo "\newcommand{\sheetauthor}{Elin Bayer}" >> $texdatei

@@ -1,0 +1,65 @@
+\documentclass{article}
+
+\ProvidesPackage{style}
+
+% Language setup
+\RequirePackage{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{csquotes}
+
+
+% Figures
+\RequirePackage{graphicx}
+\graphicspath{{./figures/}}
+
+
+\RequirePackage{enumitem}
+\newcommand*{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+% Load other style sheets
+\RequirePackage{../.style/format}
+\RequirePackage{../.style/math}
+
+% Setup Font
+\usepackage[scale=1]{tgheros} % or helvet
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\baselinestretch}{1.5} 
+
+
+
+%load bibliography with biber
+\addbibresource{sources.bib}
+
+\begin{document}
+
+% Setup title page
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+            
+        \Huge
+        \textbf{Scanning Tunneling Microscopy}
+            
+        \vspace{0.5cm}
+        \LARGE
+        experimental methods in condensed matter physics
+            
+        \vspace{1.5cm}
+            
+        \textbf{Elin Tim Bayer}
+            
+        \vfill
+            
+        \Large
+        condensed matter physics\\
+        Stockholm University\\
+        \today
+    \end{center}
+\end{titlepage}
+\tableofcontents
+\newpage
+\section{Introduction}
+
+
+\printbibliography
+\end{document}

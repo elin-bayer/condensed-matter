@@ -1,0 +1,61 @@
+%Dies ist Datei exercise_1/exercise_1.tex
+\documentclass{article}
+\usepackage{silence}
+\WarningFilter{latex}{You have requested package}
+\WarningFilter{latex}{Empty bibliography}
+\WarningFilter{latex}{Interword spacing}
+\newcommand{\tutor}{Andreas Rydh}
+\newcommand{\modul}{condensed matter}
+\newcommand{\sheet}{1}
+\newcommand{\sheetauthor}{Elin Bayer}
+\usepackage{../style}
+\begin{document}
+\section*{\#5.1}
+\begin{itemize}
+    \item[Given:] Free el. approx
+    \item[Wanted:] Mean free path of cond. el. in Ag at room temp.
+\end{itemize}
+
+\subsection*{Solution}
+The mean free path is given by 
+\begin{align}
+    l &= v_F \tau
+    \intertext{Use \(\varepsilon_F = \frac{m\nu_F^2}{2}\) with that we get an expression for the Fermi velocity}
+    v_F &= \sqrt{\frac{2\varepsilon_F}{m}} 
+    \intertext{Ag has fcc structure and therefore 4 atoms per unit cell, this implies \(\frac{N_{At}}{V} = \frac{4}{a^3}\), still have to look up \(a\), we get \(\tau\) via the resistivity \(\rho = \frac{m}{nq^2\tau}\), the values are:}
+    \rho_{Ag} &= \SI{10.5}{\gram\per\centi\meter\cubed}, \quad m = \SI{107.9}{\gram\per\mole}, \quad \rho = \SI{1.51e-6}{\ohm\centi\meter}, \quad a = \SI{4.09}{\angstrom}
+\end{align}
+
+\section*{\#5.2}
+\begin{itemize}
+    \item[Given:] CuZn alloy, \(\frac{N_{at}}{V}\) equal to \(\frac{N_{st}}{V}|_{Cu} \)
+    \item[Wanted:] \(\varepsilon_F\) 
+\end{itemize}
+
+\subsection*{Solution}
+The fermi energy is given by \(\varepsilon_F = \frac{\hbar^2k_F^2}{2m}\), with \(k_F = \left(3\pi^2n\right)^{1/3}\) and \(n = \frac{N_{At}}{V}\), we get \(\varepsilon_F = \frac{\hbar^2}{2m}\left(3\pi^2\frac{N_{At}}{V}\right)^{2/3}\). Since \(\frac{N_{At}}{V} = \frac{N_{st}}{V}|_{Cu}\) we can use the values for Cu to get the Fermi energy.
+Cu has the structure fcc and therefore 4 atoms per unit cell, this implies \(\frac{N_{At}}{V} = \frac{4}{a^3}\) and for CuZn we have \(n= 1.5\cdot n_{Cu} \), where \(a_{Cu} = \SI{3.61}{\angstrom}\).
+
+\section*{\#5.3}
+\begin{itemize}
+    \item[Given:] 3D \(\varepsilon_F = \frac{\hbar^2k^2_F}{2m}\) with \(k_F = \left(3\pi^2n\right)^{1/3}\)
+    \item[Wanted:] corresponding 2D case for \(\varepsilon_F\) k
+\end{itemize}
+
+\subsection*{Solution}
+Boundery condition: \(\psi(0) = \psi(L) = \frac{1}{A} e^{ik_x}\), with \(k_x\cdot L = 2\pi n_x\) and  therefore \(k_x = 2\pi n_x/L\).
+\begin{align}
+    \frac{\pi k_F^2}{\frac{2\pi}{L}^2} \cdot 2 = N \implies k_F = \sqrt{2\pi \frac{N}{A}}
+\end{align}
+
+\section*{\#1.6}
+\begin{itemize}
+    \item[Given:] Si, density \(\rho = \SI{2.33}{\gram\per\centi\meter\cubed}\), "hard sphere"
+    \item[Wanted:] If atoms arranged into close packing what is the density?
+\end{itemize}
+
+\subsection*{Solution}
+Si has diamond structure
+
+\end{document}
+
